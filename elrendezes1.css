@@ -1,0 +1,48 @@
+*{
+    box-sizing: border-box;
+}
+main{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: 
+        "h h"
+        "n n"
+        "a ar"
+        "f f";
+}
+header{
+    grid-area: h;
+}
+nav{
+    grid-area: n;
+}
+article{
+    grid-area: ar;
+}
+aside{
+    grid-area: a;
+    div{
+        padding: 20px;
+        img{
+            width: 100%;
+        }
+    }
+}
+footer{
+    grid-area: f;
+}
+
+@media screen and (max-width:800px){    
+    main{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    grid-template-areas: 
+        "h"
+        "n"
+        "a"
+        "ar"
+        "f";
+    }
+
+}
